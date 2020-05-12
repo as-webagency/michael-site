@@ -1,0 +1,168 @@
+.footer
+    &__bg
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            background: url('../img/footer.jpg') center no-repeat
+            width: 100%
+            min-height: 1170px
+    &__section
+        &-title
+            margin-left: 22px
+            padding-top: 282px
+            position: relative
+            z-index: 5 
+            &::before
+                content: ''
+                position: absolute
+                top: 160px
+                left: -90px
+                background: url('../img/tambourine.png') no-repeat
+                max-width: 367px
+                width: 100%
+                min-height: 288px
+    &__text
+        font-size: 23px
+        color: $light
+        max-width: 1010px
+        margin: 30px auto 35px
+        position: relative
+        line-height: 29px
+        text-align: center
+        span
+            display: block
+    &-side
+        +flex-wrap
+        justify-content: space-between
+        &__relative
+            position: relative
+            margin-top: 145px
+        &__left
+            max-width: 430px
+            margin-left: 20px
+            p
+                font-size: 45px
+                color: $textBlue
+                line-height: 53px
+                font-weight: 900
+                font-style: italic
+                margin: 0
+                text-transform: uppercase
+        &__list
+            padding: 0
+            margin: -15px 0 0
+            list-style-type: none
+            max-width: 370px
+        &__item
+            font-size: 18px
+            color: $light
+            line-height: 18px
+            position: relative
+            padding-left: 10px
+            margin-bottom: 18px
+            &::before
+                content: ''
+                width: 4px
+                height: 1px
+                position: absolute
+                top: 10px
+                left: 0
+                background-color: $textBlue
+            &:last-child
+                margin-bottom: 0
+        &__circle
+            margin-top: -38px
+            margin-left: -65px
+            min-width: 365px
+            width: 100%
+            height: 365px
+            border: 3px solid $textBlue     
+            border-radius: 50%  
+            position: relative
+            &-image
+                position: absolute
+                top: -70px
+                left: 50%
+                transform: translateX(-50%)
+                background: url('../img/present.png') center no-repeat
+                width: 134px
+                height: 154px
+        &__title
+            text-align: center
+            text-transform: uppercase
+            font-size: 19px
+            color: $light
+            font-weight: bold
+            margin: 96px auto 18px
+        &__group
+            position: relative
+        &__form
+            max-width: 200px
+            margin: 0 auto
+            &::before
+                content: ''
+                position: absolute
+                left: 55%
+                transform: translateX(-55%)
+                bottom: 30px
+                background: url(../img/shadow.png) center/cover no-repeat
+                width: 185px
+                height: 58px
+        &__input
+            height: 60px
+        &__button
+            height: 60px
+            margin-top: 20px
+            position: relative
+            overflow: hidden
+    &__line
+        border-bottom: 1px dashed rgba($light, 0.4)
+        position: relative
+        margin: 50px 0 60px
+    &__bottom
+        position: relative
+        +flex-wrap
+        margin-left: 18px
+        margin-top: 68px
+    &__city
+        margin: 11px 50px 0 50px
+        &::before
+            content: url('../img/mark.png')
+            display: inline-block
+            vertical-align: top
+            padding-right: 11px
+            margin-left: -5px
+    &__phone
+        margin-left: 10px
+        position: relative
+        &::before
+            content: url('../img/phone.png')
+            position: absolute
+            top: 3px
+            left: -29px
+    &__button
+        min-width: 200px
+        height: 60px
+        margin-top: -11px
+    &__contacts 
+        +flex
+        flex-direction: row-reverse
+        margin-left: auto
+    .social__contacts
+        margin: -10px 36px 0 0
+    .social__link-instagram
+        width: 16px
+        height: 16px
+        +flex
+    .social__link-vk
+        width: 22px
+        height: 24px
+        +flex
+        align-items: center
+    .social__link-telegram
+        width: 19px
+        height: 16px
+        +flex
