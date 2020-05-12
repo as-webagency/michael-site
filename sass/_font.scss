@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Circe';
+    font-display: swap;
+    src: url('../fonts/Circe-Light.eot');
+    src: local('Circe Light'), local('Circe-Light'),
+        url('../fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Circe-Light.woff2') format('woff2'),
+        url('../fonts/Circe-Light.woff') format('woff'),
+        url('../fonts/Circe-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-display: swap;
+    src: url('../fonts/UniNeueBlack-Italic.eot');
+    src: local('UniNeueBlack-Italic'),
+        url('../fonts/UniNeueBlack-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/UniNeueBlack-Italic.woff2') format('woff2'),
+        url('../fonts/UniNeueBlack-Italic.woff') format('woff'),
+        url('../fonts/UniNeueBlack-Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Circe';
+    font-display: swap;
+    src: url('../fonts/Circe-Regular.eot');
+    src: local('Circe'), local('Circe-Regular'),
+        url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Circe-Regular.woff2') format('woff2'),
+        url('../fonts/Circe-Regular.woff') format('woff'),
+        url('../fonts/Circe-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-display: swap;
+    src: url('../fonts/UniNeueBlack.eot');
+    src: local('UniNeueBlack'),
+        url('../fonts/UniNeueBlack.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/UniNeueBlack.woff2') format('woff2'),
+        url('../fonts/UniNeueBlack.woff') format('woff'),
+        url('../fonts/UniNeueBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-display: swap;
+    src: url('../fonts/UniNeueHeavy.eot');
+    src: local('UniNeueHeavy'),
+        url('../fonts/UniNeueHeavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/UniNeueHeavy.woff2') format('woff2'),
+        url('../fonts/UniNeueHeavy.woff') format('woff'),
+        url('../fonts/UniNeueHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-display: swap;
+    src: url('../fonts/UniNeueBold.eot');
+    src: local('UniNeueBold'),
+        url('../fonts/UniNeueBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/UniNeueBold.woff2') format('woff2'),
+        url('../fonts/UniNeueBold.woff') format('woff'),
+        url('../fonts/UniNeueBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    font-display: swap;
+    src: url('../fonts/UniNeueRegular.eot');
+    src: local('UniNeueRegular'),
+        url('../fonts/UniNeueRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/UniNeueRegular.woff2') format('woff2'),
+        url('../fonts/UniNeueRegular.woff') format('woff'),
+        url('../fonts/UniNeueRegular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

@@ -1,0 +1,100 @@
+.masters
+    padding-bottom: 140px
+    &__bg
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: -240px
+            width: 100%
+            min-height: 420px
+            background: url('../img/cloud.png') center no-repeat
+            z-index: 5
+    .container
+        max-width: 1420px
+    &__section
+        &-title
+            margin: 322px 0 0 12px
+    &-card
+        &s
+            +flex-wrap
+            justify-content: space-between
+            &__size
+                margin-top: 82px
+        &__item
+            position: relative
+            z-index: 7
+            background: url('../img/block.png') center no-repeat
+            max-width: 462px
+            width: 100%
+            min-height: 710px
+            background-size: cover
+            &:nth-child(1)
+                left: 52px
+
+            &:nth-child(2)
+                left: 8px
+            &:nth-child(3)
+                left: -37px
+        &__image
+            margin-top: -110px
+            margin-bottom: 5px
+            img
+                margin: 0 auto
+        &__position
+            text-align: center
+            font-size: 26px
+            margin: 0
+            line-height: 28px
+            color: $black
+            font-weight: 900
+            span
+                display: block
+                color: $grey
+        &__description
+            max-width: 280px
+            margin: 25px auto 0
+            color: $black
+            font-size: 18px
+            line-height: 24px
+            height: 72px
+            overflow: hidden
+            span
+                color: $textBlue
+                font-weight: bold
+        &__list
+            max-width: 275px
+            margin: 27px auto 0
+            font-size: 18px
+            color: $black
+            padding: 0
+            list-style: none
+            &-item
+                position: relative
+                line-height: 24px
+                padding-left: 35px
+                margin-bottom: 24px
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 0
+                    left: 0
+                    background: url('../img/cheсk.png') no-repeat
+                    width: 20px
+                    height: 19px
+        &__animate
+            position: absolute
+            right: 0
+            bottom: 4%
+            animation-name: animateIcon
+            animation-duration: 4s
+            animation-direction: normal
+            animation-iteration-count: infinite
+        &__shadow
+            background: url('../img/shad.png') no-repeat
+            width: 307px
+            height: 74px
+            position: absolute
+            right: -70px
+            bottom: -50px

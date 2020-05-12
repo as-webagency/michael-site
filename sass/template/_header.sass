@@ -1,0 +1,42 @@
+.header
+    padding: 50px 0 0
+    &__relative
+        position: relative
+        z-index: 5
+    &__content
+        +flex-wrap
+        max-width: 1202px
+        margin-left: auto
+    &__city
+        margin: 11px 50px 0 50px
+        &::before
+            content: url('../img/mark.png')
+            display: inline-block
+            vertical-align: top
+            padding-right: 11px
+            margin-left: -5px
+    &__phone
+        position: relative
+        margin-left: 10px
+        &::before
+            content: url('../img/phone.png')
+            position: absolute
+            top: 3px
+            left: -29px
+    &__contacts
+        margin-left: auto
+    &__button
+        min-width: 200px
+        height: 60px
+        margin-top: -11px
+.custom-logo-link
+    display: block        
+.social
+    &__contacts
+        padding: 0
+        margin: 31px 0 0
+        list-style: none
+        +flex-content-center       
+    &__item
+        &:nth-child(2)
+            margin: 0 10px
