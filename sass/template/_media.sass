@@ -1,0 +1,369 @@
+@media (max-width: 1800px)
+    .portfolio
+        .swiper
+            &-button
+                &-next
+                    right: 6%
+                &-prev
+                    left: 6%
+@media (max-width: 1750px)
+    .hero
+        &__bg
+            &::after
+                right: 4%
+@media (max-width: 1615px)
+    .portfolio
+        .swiper
+            &-button
+                &-next
+                    right: 3%
+                &-prev
+                    left: 3%
+@media (max-width: 1520px)
+    .portfolio
+        .swiper
+            &-button
+                &-next
+                    right: 0
+                &-prev
+                    left: 0
+@media (max-width: 1500px)
+    .hero
+        &__bg
+            &::after
+                right: 0
+@media (max-width: 1460px)
+    .masters
+        &-card
+            &__shadow
+                right: -50px
+@media (max-width: 1440px)
+    .portfolio 
+        &-master
+            &__bottom
+                left: 9%
+        .swiper
+            &-pagination
+                &-fraction
+                    bottom: -8px
+                    left: 50%
+                    transform: translateX(-50%)
+                &::after
+                    display: none
+                &-total
+                    padding-right: 0
+@media (max-width: 1425px)
+    .portfolio
+        &-master
+            &__image
+                max-width: 1000px
+            &__bottom
+                left: 15%
+                &-name
+                    padding-right: 17px
+                &-attendance
+                    padding-right: 20px
+        .swiper
+            &-button
+                &-next,
+                &-prev
+                    top: 50%
+                    z-index: 10
+@media (max-width: 1415px)
+    .masters
+        padding-bottom: 0
+        &-card
+            &s
+                +content-center
+            &__item
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3)
+                    left: auto
+                &:nth-child(3)
+                    margin-top: 200px
+@media (max-width: 1400px)
+    .hero
+        &__bg
+            &::after
+                max-width: 600px
+                background-size: contain
+        &__content
+            &-circle
+                left: 40%
+@media (max-width: 1260px)
+    .main-title
+        font-size: 50px
+        line-height: 50px
+    .hero
+        &__content
+            &-title
+                max-width: 400px   
+            p
+                font-size: 28px
+                max-width: 420px
+                line-height: 34px
+            &-circle
+                left: 37%       
+@media (max-width: 1200px) 
+    .portfolio
+        &-master
+            &__bottom
+                left: 13%
+                &-name
+                    &::after
+                        right: -50px
+                    &::before
+                        right: -70px
+                &-attendance
+                    margin-left: 90px
+        .swiper
+            &-button
+                &-next, 
+                &-prev
+                    top: 51%
+@media (max-width: 1150px)      
+    .hero
+        &__content
+            margin-left: 0
+            &-circle
+                left: 30%  
+                bottom: -110px 
+    .portfolio
+        &-masters
+            display: none
+        .swiper
+            &-button
+                &-next, 
+                &-prev
+                    display: none     
+        &-slide
+            background: url('../img/slide.png') center no-repeat
+            max-width: 382px
+            width: 100%
+            min-height: 522px
+            &__item
+                margin: 0 auto
+            &__image
+                max-width: 260px
+                margin: 55px auto 0
+                img
+                    border-radius: 10px
+@media (max-width: 1070px)        
+    .hero
+        .container
+            padding: 0
+        &__content
+            &-circle
+                margin-top: 60px
+                position: static
+                background: none
+                max-width: 100%
+                height: auto
+                background-image: linear-gradient( 85deg, rgb(81,121,164) 0%, rgb(106,169,236) 100%);
+                opacity: 0.902
+                padding: 50px 0 80px
+            &-title,
+            p,
+            &-price,
+            &-list
+                margin-left: 15px
+    .masters
+        &__section
+            &-title
+                margin: 0 0 12px
+                padding-top: 55px
+@media (max-width: 992px)
+    .social__contacts
+        margin: 15px 0 0
+    .header
+        padding: 30px 0 0
+    .hero
+        &__bg
+            &::after
+                top: 450px
+                right: auto
+                left: 50%
+                transform: translateX(-50%)  
+                min-height: 530px
+        &__content
+            &-title,
+            p
+                +flex
+                justify-content: center
+                width: 100%
+                max-width: 100%  
+                margin-left: 0
+                margin-top: 20px  
+            &-price 
+                margin: 40px auto 15px
+            &-list
+                margin: 0 auto
+            &-circle
+                margin-top: 530px
+            &-title
+                margin-top: 30px
+                margin-bottom: 5px
+            p
+                font-size: 24px
+                margin-top: 0
+                padding: 0 15px
+    .main-title
+        font-size: 40px
+        line-height: normal
+@media (max-width: 953px)
+    .masters
+        &-card
+            &__item
+                margin-bottom: 190px
+                &:nth-child(3)
+                    margin-top: 0
+                    margin-bottom: 0
+@media (max-width: 830px)
+    .header
+        &__city
+            display: none   
+        &__phone
+            margin-left: 55px     
+@media (max-width: 805px)
+    .hero
+        &__bg
+            &::after
+                top: 500px 
+    .header
+        padding: 20px 0 0
+        .container
+            max-width: 280px
+        &__phone
+            margin-left: 30px
+            margin-top: 20px
+        &__content
+            +flex-column
+        &__contacts
+            display: none  
+@media (max-width: 570px) 
+    .masters
+        &-card
+            &__shadow
+                right: auto
+                left: 50%
+                transform: translateX(-50%)
+            &__animate
+                bottom: 2%
+                animation-name: none
+                right: auto
+                left: 50%
+                transform: translateX(-50%)
+@media (max-width: 480px) 
+    .container
+        max-width: 280px  
+    .section
+        &-title
+            &__heading
+                font-size: 26px
+                max-width: 280px
+                margin: 0 auto
+                line-height: 38px   
+            &__subtitle
+                font-size: 27px
+                line-height: 36px
+    .masters
+        &__section
+            &-title
+                padding-top: 45px
+        &-card
+            &__item
+                top: -130px
+                background-size: contain
+                max-width: 360px
+                margin-bottom: -48px
+            &__image
+                margin: 0 auto 7px
+                max-width: 215px
+            &__position
+                font-size: 20px
+                line-height: 24px
+            &__description
+                max-width: 220px
+                margin: 15px auto 0
+                font-size: 14px
+                line-height: 19px
+            &__list
+                max-width: 228px
+                margin: 4px auto 0
+                font-size: 14px
+                &-item
+                    margin-bottom: 14px
+                    &::before
+                        left: 5px
+            &__animate
+                bottom: 13%
+                max-width: 120px
+            &__shadow
+                bottom: 25px
+                max-width: 250px
+                width: 100%
+                background-size: contain
+    .header
+        &__content
+            margin-left: -13px
+        &__phone
+            margin-left: 27px
+            margin-top: 11px     
+    .hero
+        .container
+            max-width: 100%
+        &__bg
+            &::after
+                top: 270px
+                max-width: 360px
+                min-height: 360px
+        &__content
+            &-title
+                margin: 30px auto 0 
+                max-width: 280px   
+            p
+                padding: 0
+                font-size: 18px
+                line-height: 22px
+                margin: 10px auto 0 
+                max-width: 280px  
+            &-price
+                margin: 42px auto 15px
+                max-width: 280px 
+            &-list
+                display: none 
+            &-circle
+                margin-top: 378px  
+            &-group
+                right: 0
+            &-button
+                right: 0  
+            &-form
+                &::before
+                    left: 50%
+                    transform: translateX(-50%)
+    .main-title
+        font-size: 36px
+        line-height: 36px
+        max-width: 280px 
+    .price
+        &__new
+            font-size: 34px
+            line-height: 36px
+            span
+                font-size: 64px
+                margin-right: 3px
+        &__old
+            margin-right: 36px
+    .circle
+        &__item
+            max-width: none
+            &-title
+                margin: -2px auto 23px
+                right: 0
+            &-line
+                left: 50%
+                transform: translateX(-50%)
+            &-text
+                right: 0

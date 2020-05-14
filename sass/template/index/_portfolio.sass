@@ -13,7 +13,7 @@
             content: ''
             position: absolute
             left: 0
-            bottom: -290px
+            bottom: -300px
             background: url('../img/cloud-bottom.png') center no-repeat
             width: 100%
             min-height: 456px
@@ -33,17 +33,111 @@
         &s
             &__size
                 position: relative
-                z-index: 5
+                z-index: 9
                 top: -55px
                 left: 10px
-            &__wrapper
-                .portfolio-master
-                    &__item
-                        max-width: 1247px
-                        margin: 0 auto
-                        min-height: 682px
-                        background: url('../img/bg-bg.png') center no-repeat
         &__image
-            max-width: 1126px
+            max-width: 1247px
             margin: 0 auto
-            padding-top: 54px
+        &__inner
+            margin: 0 auto
+        &__bottom
+            position: absolute
+            bottom: 13%
+            left: 17%
+            &-flex
+                +flex-wrap
+            &-name
+                font-size: 18px
+                color: $black
+                line-height: 24px
+                padding-right: 40px
+                position: relative
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 0
+                    right: -64px
+                    background: url('../img/rocket.png') center no-repeat
+                    width: 50px
+                    height: 51px
+                &::before
+                    content: ''
+                    position: absolute
+                    top: -3px
+                    right: -80px
+                    width: 1px
+                    height: 60px
+                    background-color: $line
+                span
+                    font-weight: bold
+                    color: $darkBlue
+                    display: block
+            &-attendance
+                position: relative
+                margin-left: 100px
+                padding-right: 56px
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 0
+                    right: -64px
+                    background: url('../img/card.png') center no-repeat
+                    width: 59px
+                    height: 48px
+                &::before
+                    content: ''
+                    position: absolute
+                    top: -3px
+                    right: -78px
+                    width: 1px
+                    height: 60px
+                    background-color: $line
+                p
+                    font-size: 18px
+                    color: $black
+                    line-height: 24px
+                    margin: 0
+                    span
+                        font-weight: 900
+                        color: $darkBlue
+            &-income
+                font-size: 18px
+                color: $black
+                line-height: 24px
+                max-width: 200px
+                position: relative
+                margin-left: 98px
+                span
+                    font-weight: 900
+                    color: $darkBlue
+.portfolio
+    .swiper
+        &-button
+            &-next
+                right: 10%
+            &-prev
+                left: 10%
+        &-pagination
+            &::after
+                content: ''
+                position: absolute
+                top: 0
+                right: 0
+                width: 1px
+                height: 60px
+                background-color: $line
+            &-fraction
+                position: absolute
+                bottom: 12%
+                left: 10%
+                width: auto
+                color: $total
+                font-size: 18px
+            &-current
+                font-size: 53px
+                color: rgba(65, 94, 125, 0.902)
+                font-style: italic
+                font-weight: 900
+            &-total
+                padding-right: 23px
