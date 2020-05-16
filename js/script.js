@@ -70,11 +70,8 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
                     data: $(form).serialize(),
                     success: function (response) {
                         $(form)[0].reset();
-                        $('.modal').removeClass('modal--visible');
-                        $('.modal-thanks').addClass('modal-thanks--visible');
-                        $('.modal-thanks__close').click(function (){
-                        $('.modal-thanks').removeClass('modal-thanks--visible');
-                        });
+                        $('.modal').fadeOut();
+                        $('.modal-thanks').fadeIn();
                     },
                     error: function (response) {
                         console.error('Что-то пошло не так. Ошибка' + response);
@@ -84,7 +81,8 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
         });
     }
     formValidate('.hero__content-form');
-    formValidate('.footer-side__formfooter-side__form');
+    formValidate('.footer-side__form');
+    formValidate('.modal__form');
 
     $("[type=tel]").mask("+7 (000) 000-00-00", {placeholder:"Введите номер телефона"});
 
@@ -124,6 +122,21 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
               slidesPerView: 1
             },
         }
+    });
+    
+    $('.footer__button').click(function() {
+        $('.mask, .modal').fadeIn();
+        $('.wrapper').addClass('wrapper-active');
+    });
+
+    $('.header__button').click(function() {
+        $('.mask, .modal').fadeIn();
+        $('.wrapper').addClass('wrapper-active');
+    });
+
+    $('.mask, .modal__close').click(function() {
+        $('.mask, .modal').fadeOut();
+        $('.wrapper').removeClass('wrapper-active');
     });
 
 });

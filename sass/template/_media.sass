@@ -139,6 +139,17 @@
             &-circle
                 left: 37%       
 @media (max-width: 1220px) 
+    .footer
+        .section
+            &-title
+                &__heading,
+                &__subtitle
+                    font-size: 34px
+        &-side
+            &__left 
+                max-width: 340px
+                p
+                    font-size: 36px
     .reviews
         .swiper
             &-slide
@@ -183,7 +194,29 @@
         &-block
             &__item
                 max-width: 620px      
-@media (max-width: 1150px)      
+@media (max-width: 1150px)  
+    .footer
+        &__bg
+            &::before
+                min-height: 1720px
+                background-size: cover
+        .section
+            &-title
+                &::before
+                    display: none   
+        &-side
+            +flex-column-center
+            &__relative
+                margin-top: 70px
+            &__circle
+                margin-left: 0
+                margin-top: 100px
+            &__left
+                margin-left: 0
+                p
+                    text-align: center
+            &__list
+                margin: 40px 0 0
     .hero
         &__content
             margin-left: 0
@@ -325,6 +358,11 @@
                 margin: 0 0 12px
                 padding-top: 55px
 @media (max-width: 992px)
+    .footer
+        &__city
+            display: none
+        &__phone
+            margin-left: 60px
     .reviews 
         .swiper
             &-button
@@ -378,6 +416,25 @@
                     margin-top: 0
                     margin-bottom: 0
 @media (max-width: 830px)
+    .footer
+        &__bg
+            &::before
+                min-height: 1910px
+        &__bottom
+            +flex-column-center
+            margin-left: 0
+            margin-top: 30px
+        &__contacts
+            margin: 0 auto
+            flex-direction: column-reverse
+        &__phone
+            margin: 25px 0 35px
+        &__line
+            margin: 40px 0
+        .social
+            &__contacts
+                margin: 0
+                margin-bottom: 40px
     .header
         &__city
             display: none   
@@ -399,6 +456,18 @@
             +flex-column
         &__contacts
             display: none  
+@media (max-width: 701px)
+    .footer 
+        .section
+            &-title
+                &__heading, 
+                &__subtitle
+                    font-size: 30px
+                    line-height: 30px
+        &__text 
+            color: rgba($lightGrey, .6)
+            span
+                display: initial
 @media (max-width: 615px)
     .reviews
         .swiper
@@ -451,9 +520,93 @@
                 right: auto
                 left: 50%
                 transform: translateX(-50%)
+@media (max-width: 561px)
+    .footer
+        &__bg
+            &::before
+                min-height: 1970px 
 @media (max-width: 480px) 
     .container
         max-width: 280px 
+    .modal,
+    .modal-thanks
+        &__dialog
+            min-width: 310px
+            height: 310px
+        &__circle
+            max-width: 290px
+            height: 290px
+        &__close
+            top: 0
+            right: 20px
+        &__title
+            margin: 50px auto 15px
+            font-size: 14px
+            max-width: 240px
+        &__subtitle
+            font-size: 14px
+            line-height: 18px
+            margin: 0 auto 15px
+    .modal
+        &__form
+            &-input
+                height: 44px
+            &-button
+                height: 44px
+        &__circle
+            max-width: 315px
+            height: 315px
+        &__close
+            background-size: contain
+            width: 50px
+            height: 50px
+            right: 25px
+        &__title
+            max-width: 220px
+            margin: 45px auto 5px
+        &__subtitle
+            max-width: 220px
+        &__policy
+            margin: -5px auto 0
+        &__dialog 
+            border: none
+    .footer
+        .container
+            padding: 0
+        .section
+            &-title
+                margin-left: 0
+                text-align: left
+                max-width: 275px
+                &__heading,
+                &__subtitle
+                    line-height: 34px
+        &__text
+            text-align: left
+            margin: 30px auto 0
+        &-side
+            &__relative
+                margin-top: 20px
+            &__left
+                position: relative
+                left: -50px
+                p
+                    font-size: 23px
+                    line-height: 33px
+            &__circle
+                margin-top: 90px
+                left: -45px
+                border: 2px solid $textBlue
+            &__list
+                position: relative
+                left: -38px
+        &__line
+            margin: 45px 0 38px
+        &__phone
+            margin: 12px -13px 28px 0
+        .social
+            &__contacts
+                margin-bottom: 50px
     .reviews 
         &__bg
             margin-top: 108px
@@ -611,7 +764,30 @@
                 transform: translateX(-50%)
             &-text
                 right: 0
+@media (max-width: 450px)
+    .footer
+        &-side
+            &__center
+                width: 100%
+            &__left,
+            &__list
+                position: static
 @media (max-width: 375px)
+    .footer
+        &__bg
+            &::before
+                min-height: 1900px
+        &-side
+            &__title
+                margin: 55px auto 15px
+            &__circle
+                min-width: 300px
+                height: 300px
+                left: -10px
+                &-image
+                    background-size: contain
+                    width: 94px
+                    height: 114px
     .reviews 
         .swiper
             &-slide
