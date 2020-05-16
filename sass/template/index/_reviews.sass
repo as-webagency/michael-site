@@ -17,6 +17,7 @@
     &__section
         &-title
             margin-left: 10px
+            padding-top: 15px
     &-block
         &__item
             margin-top: -58px
@@ -37,18 +38,19 @@
             &:nth-child(odd)
                 padding: 80px 90px 80px
                 margin-left: 10px
-                &:first-child
-                    &::after
-                        content: ''
-                        background: url('../img/logo/circle.png') no-repeat
-                        width: 58px
-                        height: 58px
-                        position: absolute
-                        right: -30px
-                        top: 55%
-                        transform: translateY(-55px)
             &:nth-child(even)
                 padding: 80px 90px 80px 80px
+        &-active
+            position: relative
+            &::after
+                content: ''
+                background: url('../img/logo/circle.png') no-repeat
+                width: 58px
+                height: 58px
+                position: absolute
+                right: -42px
+                top: 55%
+                transform: translateY(-55px)
         &__inner
             +flex-items-center
             margin-left: 7px
@@ -63,11 +65,15 @@
             font-weight: bold     
             width: 150px
         &__text
+            margin: 29px 0 0 8px
+            max-width: 450px
+            overflow-y: scroll
+            height: 210px
             p
-                margin: 29px 0 0 8px
                 color: $black
                 line-height: 25px
-                max-width: 450px
+                margin: 0
+                
         &__video
             margin-top: 40px
             height: 200px
@@ -89,3 +95,9 @@
             background: url('../img/logo/prev.png') center no-repeat
             &::after
                 display: none
+.portfolio-masters__size
+    .swiper-slide-active::after
+        display: none
+.portfolio-slider
+    .swiper-slide-active::after
+        display: none               

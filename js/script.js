@@ -88,7 +88,7 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
 
     $("[type=tel]").mask("+7 (000) 000-00-00", {placeholder:"Введите номер телефона"});
 
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.portfolio-masters', {
         pagination: {
             el: '.swiper-pagination',
             type: 'fraction',
@@ -96,20 +96,33 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
+        }
     });
 
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper ('.portfolio-slider', {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         }
     });
 
-    var mySwiper2 = new Swiper ('.swiper-container', {
+    var mySwiper2 = new Swiper ('.reviews-block .swiper-container', {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        slidesPerView: 2,
+        breakpoints: {
+            1181: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1180: {
+              slidesPerView: 1
+            },
+            320: {
+              slidesPerView: 1
+            },
         }
     });
 

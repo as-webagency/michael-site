@@ -6,11 +6,26 @@
                     right: 6%
                 &-prev
                     left: 6%
+    .reviews
+        .swiper
+            &-button
+                &-next
+                    right: 8%
+                &-prev
+                    left: 8%
 @media (max-width: 1750px)
     .hero
         &__bg
             &::after
                 right: 4%
+@media (max-width: 1650px)
+    .reviews
+        .swiper
+            &-button
+                &-next
+                    right: 3%
+                &-prev
+                    left: 3%
 @media (max-width: 1615px)
     .portfolio
         .swiper
@@ -37,6 +52,13 @@
         &-card
             &__shadow
                 right: -50px
+    .reviews
+        .swiper
+            &-button
+                &-next
+                    right: 0
+                &-prev
+                    left: 0
 @media (max-width: 1440px)
     .portfolio 
         &-master
@@ -83,6 +105,17 @@
                 &:nth-child(3)
                     margin-top: 200px
 @media (max-width: 1400px)
+    .reviews 
+        .swiper
+            &-button
+                &-next,
+                &-prev
+                    top: auto
+                    bottom: -150px
+                &-next
+                    right: 30%
+                &-prev
+                    left: 30%
     .hero
         &__bg
             &::after
@@ -105,6 +138,24 @@
                 line-height: 34px
             &-circle
                 left: 37%       
+@media (max-width: 1220px) 
+    .reviews
+        .swiper
+            &-slide
+                &-active
+                    &::after
+                        right: -48px
+        &-block
+            &__item
+                margin: -58px auto 0
+        .swiper
+            &-slide
+              +flex-column  
+              &__item
+                  &:nth-child(odd)
+                      &:first-child
+                          &::after
+                              display: none
 @media (max-width: 1200px) 
     .portfolio
         &-master
@@ -122,6 +173,16 @@
                 &-next, 
                 &-prev
                     top: 51%
+@media (max-width: 1180px)
+    .reviews 
+        .swiper
+            &-slide
+                &-active
+                    &::after
+                        display: none
+        &-block
+            &__item
+                max-width: 620px      
 @media (max-width: 1150px)      
     .hero
         &__content
@@ -142,8 +203,98 @@
             max-width: 382px
             width: 100%
             min-height: 522px
+            &__bottom
+                position: absolute  
+                top: 230px
+                left: 56px
+                max-width: 230px
+                &-name,
+                &-attendance,
+                &-income
+                    margin-left: 0
+                &-name
+                    font-size: 18px
+                    color: $black
+                    line-height: 24px
+                    padding-bottom: 17px
+                    border-bottom: 1px solid $line
+                    span
+                        font-weight: bold
+                        color: $darkBlue
+                        display: block
+                &-attendance
+                    font-size: 14px
+                    color: $black
+                    line-height: 20px
+                    margin: 18px 0 0 0
+                    padding-bottom: 20px
+                    padding-left: 65px
+                    border-bottom: 1px solid $line
+                    position: relative
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: 3px
+                        left: 0
+                        background: url('../img/rocket.png') no-repeat
+                        width: 40px
+                        height: 43px
+                        background-size: contain
+                    p
+                        margin: 0
+                    span
+                        font-weight: 900
+                        color: $darkBlue
+                &-income
+                    font-size: 14px
+                    color: $black
+                    line-height: 20px
+                    margin: 18px 0 0 0
+                    padding-bottom: 20px
+                    padding-left: 65px
+                    position: relative
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: 5px
+                        left: 0
+                        background: url('../img/card.png') no-repeat
+                        width: 39px
+                        height: 34px
+                        background-size: contain
+                    span
+                        font-weight: 900
+                        color: $darkBlue
+            &r
+                opacity: 1
+                visibility: visible
+                width: auto
+                height: auto
+                position: relative
+                z-index: 5
+                top: -60px
+                max-width: 360px
+                .swiper
+                    &-button
+                        &-next,
+                        &-prev
+                            display: block
+                            width: 28px
+                            height: 28px
+                            top: auto
+                            bottom: 0
+                        &-next
+                            background: url('../img/right.png') center no-repeat
+                            right: 15%
+                        &-prev
+                            background: url('../img/left.png') center no-repeat
+                            left: 15%
+                    &-pagination
+                        left: 50%
+                        transform: translateX(-50%)
+
             &__item
-                margin: 0 auto
+                margin: 0 auto 30px
             &__image
                 max-width: 260px
                 margin: 55px auto 0
@@ -174,6 +325,13 @@
                 margin: 0 0 12px
                 padding-top: 55px
 @media (max-width: 992px)
+    .reviews 
+        .swiper
+            &-button
+                &-next
+                    right: 15%
+                &-prev
+                    left: 15%
     .social__contacts
         margin: 15px 0 0
     .header
@@ -241,6 +399,45 @@
             +flex-column
         &__contacts
             display: none  
+@media (max-width: 615px)
+    .reviews
+        .swiper
+            &-slide
+                &__item
+                    background: url(../img/slide.png) center no-repeat
+                    max-width: 382px
+                    width: 100%
+                    min-height: 522px 
+                    margin: 0 auto
+                    padding: 80px 60px 70px
+                    img
+                        padding-right: 0
+                        margin-right: auto
+                        border-right: none
+                &__name
+                    border-top: 1px solid $line
+                    padding-top: 18px
+                    margin-top: 17px
+                    width: 100%
+                    margin-right: 15px
+                &__inner
+                    +flex-column
+                    margin-left: 0
+                &__text
+                    height: 260px
+                    margin: 10px 0 0 5px
+                    max-width: 260px
+            &-button
+                &-next
+                    background: url(../img/right.png) center no-repeat
+                    right: 15%
+                    width: 28px
+                    height: 28px
+                &-prev
+                    background: url(../img/left.png) center no-repeat
+                    left: 15%
+                    width: 28px
+                    height: 28px
 @media (max-width: 570px) 
     .masters
         &-card
@@ -256,7 +453,54 @@
                 transform: translateX(-50%)
 @media (max-width: 480px) 
     .container
-        max-width: 280px  
+        max-width: 280px 
+    .reviews 
+        &__bg
+            margin-top: 108px
+        .swiper
+            &-button
+                &-next, 
+                &-prev
+                    bottom: -10px
+                &-next
+                    right: 21%
+                &-prev
+                    left: 21%
+    .portfolio
+        .container
+            max-width: 300px
+        &__section
+            &-title
+                padding-top: 87px
+        &-slide
+            max-width: 270px
+            &__image
+                max-width: 250px
+                height: 157px
+                overflow: hidden
+            &__bottom
+                position: absolute  
+                top: 230px
+                left: 16px
+            &r
+                top: -78px
+        .swiper
+            &-pagination
+                &-fraction
+                    bottom: 22px
+                &-current
+                    font-size: 37px
+                &-total
+                    font-size: 18px
+            &-button
+                &-next, 
+                &-prev
+                    bottom: 30px
+                &-prev
+                    left: 7%
+                &-next
+                    right: 7%
+                  
     .section
         &-title
             &__heading
@@ -367,3 +611,21 @@
                 transform: translateX(-50%)
             &-text
                 right: 0
+@media (max-width: 375px)
+    .reviews 
+        .swiper
+            &-slide
+                &__item
+                    padding: 70px 40px 70px                
+@media (max-width: 340px)
+    .reviews 
+        .swiper
+            &-slide
+                &__item
+                    padding: 70px 30px 70px                
+@media (max-width: 330px)
+    .reviews 
+        .swiper
+            &-slide
+                &__item
+                    padding: 70px 20px 70px                
