@@ -81,12 +81,9 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
         },
         slidesPerView: 2,
         breakpoints: {
-            1181: {
+            1255: {
               slidesPerView: 2,
               spaceBetween: 20,
-            },
-            1180: {
-              slidesPerView: 1
             },
             320: {
               slidesPerView: 1

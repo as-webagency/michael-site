@@ -6,26 +6,11 @@
                     right: 6%
                 &-prev
                     left: 6%
-    .reviews
-        .swiper
-            &-button
-                &-next
-                    right: 8%
-                &-prev
-                    left: 8%
 @media (max-width: 1750px)
     .hero
         &__bg
             &::after
                 right: 4%
-@media (max-width: 1650px)
-    .reviews
-        .swiper
-            &-button
-                &-next
-                    right: 3%
-                &-prev
-                    left: 3%
 @media (max-width: 1615px)
     .portfolio
         .swiper
@@ -64,12 +49,17 @@
         &-master
             &__bottom
                 left: 9%
+            &__image
+                height: 815px
         .swiper
             &-pagination
                 &-fraction
-                    bottom: -8px
+                    bottom: 0
                     left: 50%
                     transform: translateX(-50%)
+                    background-color: $light
+                    padding: 5px
+                    border-radius: 20px
                 &::after
                     display: none
                 &-total
@@ -80,17 +70,41 @@
             &__image
                 max-width: 1000px
             &__bottom
-                left: 15%
+                left: 17%
+                bottom: 23%
                 &-name
                     padding-right: 17px
                 &-attendance
                     padding-right: 20px
+            &s
+                &__size
+                    .swiper
+                        &-slide-active 
+                            .portfolio-master__inner
+                                &::before
+                                    left: 80px
+                                    top: 23%
+                                &::after
+                                    right: 80px
+                                    top: 23%
+                        &-button
+                            &-next, 
+                            &-prev
+                                top: 36% !important
+                            &-next
+                                right: 11.5% !important
+                            &-prev
+                                left: 11.5% !important
         .swiper
             &-button
                 &-next,
                 &-prev
                     top: 50%
                     z-index: 10
+            &-pagination
+                &-fraction
+                    background-color: transparent
+                    bottom: 40px
 @media (max-width: 1415px)
     .masters
         padding-bottom: 0
@@ -108,14 +122,14 @@
     .reviews 
         .swiper
             &-button
-                &-next,
-                &-prev
-                    top: auto
-                    bottom: -150px
                 &-next
-                    right: 30%
+                    right: 0
                 &-prev
-                    left: 30%
+                    left: 0
+        &-block
+            &__item
+                &::before, &::after
+                    display: none
     .hero
         &__bg
             &::after
@@ -124,6 +138,37 @@
         &__content
             &-circle
                 left: 40%
+@media (max-width: 1330px)
+    .portfolio
+        &-masters
+            &__size 
+                .swiper
+                    &-slide-active 
+                        .portfolio-master
+                            &__inner
+                                &::before,
+                                &::after
+                                    top: auto
+                                    bottom: 10px
+                                &::after
+                                    right: 15%
+                                &::before
+                                    left: 15%
+                    &-button
+                        &-prev,
+                        &-next
+                            top: auto !important
+                            bottom: 11.5% 
+                        &-next
+                            right: 21.5% !important
+                        &-prev
+                            left: 21.5% !important
+    .swiper
+        &-button
+            &-next,
+            &-prev
+                &:after
+                    display: none
 @media (max-width: 1260px)
     .main-title
         font-size: 50px
@@ -138,6 +183,28 @@
                 line-height: 34px
             &-circle
                 left: 37%       
+@media (max-width: 1254px) 
+    .reviews 
+        .swiper
+            &-slide
+                &-active
+                    &::after
+                        display: none
+            &-button
+                &-next
+                    right: 1.5%
+                &-prev
+                    left: 1.5%
+        &-block
+            &__item
+                margin: -58px auto 0
+                max-width: 620px
+                &::before, &::after
+                    display: block
+                &::before
+                    left: -12%
+                &::after
+                    right: -11%
 @media (max-width: 1220px) 
     .footer
         .section
@@ -156,9 +223,6 @@
                 &-active
                     &::after
                         right: -48px
-        &-block
-            &__item
-                margin: -58px auto 0
         .swiper
             &-slide
               +flex-column  
@@ -183,22 +247,12 @@
             &-button
                 &-next, 
                 &-prev
-                    top: 51%
-@media (max-width: 1180px)
-    .reviews 
-        .swiper
-            &-slide
-                &-active
-                    &::after
-                        display: none
-        &-block
-            &__item
-                max-width: 620px      
+                    top: 51%      
 @media (max-width: 1150px)  
     .footer
         &__bg
             &::before
-                min-height: 1720px
+                min-height: 1750px
                 background-size: cover
         .section
             &-title
@@ -353,23 +407,22 @@
             &-list
                 margin-left: 15px
     .masters
+        overflow: hidden
         &__section
             &-title
                 margin: 0 0 12px
                 padding-top: 55px
+@media (max-width: 1033px)
+    .footer
+        &__bg
+            &::before
+                min-height: 1800px
 @media (max-width: 992px)
     .footer
         &__city
             display: none
         &__phone
             margin-left: 60px
-    .reviews 
-        .swiper
-            &-button
-                &-next
-                    right: 15%
-                &-prev
-                    left: 15%
     .social__contacts
         margin: 15px 0 0
     .header
@@ -424,9 +477,12 @@
                 right: -40%
 @media (max-width: 830px)
     .footer
+        &__policy
+            margin-top: 30px
+            justify-content: center
         &__bg
             &::before
-                min-height: 1910px
+                min-height: 1970px
         &__bottom
             +flex-column-center
             margin-left: 0
@@ -440,8 +496,7 @@
             margin: 40px 0
         .social
             &__contacts
-                margin: 0
-                margin-bottom: 40px
+                margin: 0 auto 40px
     .header
         &__city
             display: none   
@@ -470,25 +525,13 @@
             +flex-column
         &__contacts
             display: none  
-@media (max-width: 701px)
-    .footer 
-        .section
-            &-title
-                &__heading, 
-                &__subtitle
-                    font-size: 30px
-                    line-height: 30px
-        &__text 
-            color: rgba($lightGrey, .6)
-            span
-                display: initial
-@media (max-width: 655px)
-    .modal
-        &__dialog
-            &::after
-                display: none
-@media (max-width: 615px)
+@media (max-width: 750px)
     .reviews
+        &-block
+            &__item
+                &::before,
+                &::after
+                    display: none
         .swiper
             &-slide
                 &__item
@@ -516,17 +559,42 @@
                     margin: 10px 0 0 5px
                     max-width: 260px
             &-button
+                &-next,
+                &-prev
+                    top: auto
+                    bottom: 0
                 &-next
                     background: url(../img/right.png) center no-repeat
-                    right: 15%
+                    right: 28%
                     width: 28px
                     height: 28px
                 &-prev
                     background: url(../img/left.png) center no-repeat
-                    left: 15%
+                    left: 28%
                     width: 28px
                     height: 28px
+@media (max-width: 701px)
+    .footer 
+        .section
+            &-title
+                &__heading, 
+                &__subtitle
+                    font-size: 30px
+                    line-height: 30px
+        &__text 
+            color: rgba($lightGrey, .6)
+            span
+                display: initial
+@media (max-width: 655px)
+    .modal
+        &__dialog
+            &::after
+                display: none
 @media (max-width: 570px) 
+    .footer
+        &__bg
+            &::before
+                min-height: 2050px
     .masters
         &-card
             &__shadow
@@ -538,12 +606,7 @@
                 animation-name: none
                 right: auto
                 left: 50%
-                transform: translateX(-50%)
-@media (max-width: 561px)
-    .footer
-        &__bg
-            &::before
-                min-height: 1970px 
+                transform: translateX(-50%) 
 @media (max-width: 480px) 
     .container
         max-width: 280px 
@@ -795,7 +858,7 @@
     .footer
         &__bg
             &::before
-                min-height: 1900px
+                min-height: 1960px
         &-side
             &__title
                 margin: 55px auto 15px
