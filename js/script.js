@@ -54,36 +54,6 @@ b.attr("data-mask-reverse")&&(d.reverse=!0);b.attr("data-mask-clearifnotmatch")&
 delete a.maskWatchers[this.selector];return this.each(function(){var b=a(this).data("mask");b&&b.remove().removeData("mask")})};a.fn.cleanVal=function(){return this.data("mask").getCleanVal()};a.applyDataMask=function(b){b=b||a.jMaskGlobals.maskElements;(b instanceof a?b:a(b)).filter(a.jMaskGlobals.dataMaskAttr).each(f)};k={maskElements:"input,td,span,div",dataMaskAttr:"*[data-mask]",dataMask:!0,watchInterval:300,watchInputs:!0,keyStrokeCompensation:10,useInput:!/Chrome\/[2-4][0-9]|SamsungBrowser/.test(window.navigator.userAgent)&&
 k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translation:{0:{pattern:/\d/},9:{pattern:/\d/,optional:!0},"#":{pattern:/\d/,recursive:!0},A:{pattern:/[a-zA-Z0-9]/},S:{pattern:/[a-zA-Z]/}}};a.jMaskGlobals=a.jMaskGlobals||{};k=a.jMaskGlobals=a.extend(!0,{},k,a.jMaskGlobals);k.dataMask&&a.applyDataMask();setInterval(function(){a.jMaskGlobals.watchDataMask&&a.applyDataMask()},k.watchInterval)},window.jQuery,window.Zepto);
 
-    function formValidate(forms) {
-        $(forms).validate({
-            errorElement: "div",
-            rules: {
-                user_phone: "required"
-            },
-            messages: {
-                user_phone: "Введите номер телефона"
-            },
-            submitHandler: function(form) {
-                $.ajax({
-                    type: "POST",
-                    url: "send.php",
-                    data: $(form).serialize(),
-                    success: function (response) {
-                        $(form)[0].reset();
-                        $('.modal').fadeOut();
-                        $('.modal-thanks').fadeIn();
-                    },
-                    error: function (response) {
-                        console.error('Что-то пошло не так. Ошибка' + response);
-                    }
-                });
-            }
-        });
-    }
-    formValidate('.hero__content-form');
-    formValidate('.footer-side__form');
-    formValidate('.modal__form');
-
     $("[type=tel]").mask("+7 (000) 000-00-00", {placeholder:"Введите номер телефона"});
 
     var swiper = new Swiper('.portfolio-masters', {
@@ -138,5 +108,40 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
         $('.mask, .modal').fadeOut();
         $('.wrapper').removeClass('wrapper-active');
     });
+
+    function formValidate(forms) {
+        $(forms).validate({
+            errorElement: "div",
+            rules: {
+                user_phone: "required"
+            },
+            messages: {
+                user_phone: "Введите номер телефона"
+            },
+            submitHandler: function(form) {
+                $.ajax({
+                    type: "POST",
+                    url: "send.php",
+                    data: $(form).serialize(),
+                    success: function (response) {
+                        $(form)[0].reset();
+                        $('.modal').fadeOut();
+                        $('.modal-thanks, .mask').fadeIn();
+                        $('.wrapper').addClass('wrapper-active');
+                        $('.mask, .modal-thanks__close').click(function() {
+                            $('.mask, .modal-thanks').fadeOut();
+                            $('.wrapper').removeClass('wrapper-active');
+                        });
+                    },
+                    error: function (response) {
+                        console.error('Что-то пошло не так. Ошибка' + response);
+                    }
+                });
+            }
+        });
+    }
+    formValidate('.hero__content-form');
+    formValidate('.footer-side__form');
+    formValidate('.modal__form');
 
 });

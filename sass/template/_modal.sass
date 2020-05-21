@@ -19,6 +19,15 @@
         height: 458px
         border-radius: 50%
         z-index: 60
+        &::after
+            content: ''
+            position: absolute
+            top: -42%
+            right: -51%
+            background: url('../img/socol.png') center/contain no-repeat
+            max-width: 510px
+            width: 100%
+            min-height: 296px
     &__close
         position: absolute
         top: 30px
@@ -102,10 +111,10 @@
                     &::before
                         background: url(../img/chek.png) center no-repeat
 .wrapper
-    transition: .4s
+    transition: .3s
     filter: blur(0px)
     &-active
-        transition: .4s
+        transition: .3s
         filter: blur(10px)   
         background-color: rgba(112, 112, 114, .5) 
 .modal-thanks

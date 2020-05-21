@@ -17,6 +17,8 @@
             background: url('../img/cloud-bottom.png') center no-repeat
             width: 100%
             min-height: 456px
+    .container
+        max-width: 1350px
     .section
         &-title
             &__heading
@@ -36,14 +38,51 @@
                 z-index: 9
                 top: -55px
                 left: 10px
+                .swiper
+                    &-slide
+                        &-active
+                            .portfolio
+                                &-master
+                                    &__inner
+                                        &::before,
+                                        &:after
+                                            content: ''
+                                            position: absolute
+                                            top: 30%
+                                            background: url('../img/lines.png') center no-repeat
+                                            width: 201px
+                                            height: 201px
+                                        &::before
+                                            left: 0
+                                        &::after
+                                            right: 0
+                    &-button
+                        &-prev,                 
+                        &-next
+                            background: url('../img/ar-r.png') center no-repeat
+                            width: 28px
+                            height: 28px  
+                            top: 43%
+                            &::after
+                                display: none                 
+                        &-prev
+                            left: 5.2% !important
+                            right: auto
+                            transform: rotate(180deg)
+                        &-next   
+                            right: 5.2% !important 
+                            left: auto              
         &__image
             max-width: 1247px
+            height: 800px
             margin: 0 auto
+            position: relative
+            z-index: 2
         &__inner
             margin: 0 auto
         &__bottom
             position: absolute
-            bottom: 13%
+            bottom: 7%
             left: 17%
             &-flex
                 +flex-wrap
@@ -53,6 +92,7 @@
                 line-height: 24px
                 padding-right: 40px
                 position: relative
+                z-index: 5
                 &::after
                     content: ''
                     position: absolute
@@ -75,6 +115,7 @@
                     display: block
             &-attendance
                 position: relative
+                z-index: 5
                 margin-left: 100px
                 padding-right: 56px
                 &::after
@@ -107,6 +148,7 @@
                 line-height: 24px
                 max-width: 200px
                 position: relative
+                z-index: 5
                 margin-left: 98px
                 span
                     font-weight: 900
@@ -134,7 +176,7 @@
                 background-color: $line
             &-fraction
                 position: absolute
-                bottom: 12%
+                bottom: 8%
                 left: 10%
                 width: auto
                 color: $total

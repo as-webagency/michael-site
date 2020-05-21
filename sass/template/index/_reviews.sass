@@ -20,9 +20,39 @@
             padding-top: 15px
     &-block
         &__item
-            margin-top: -58px
+            margin-top: -40px
             position: relative
             z-index: 8
+            &::before,
+            &::after
+                content: ''
+                position: absolute
+                top: 23%
+                background: url('../img/lines2.png') center no-repeat
+                width: 201px
+                height: 201px
+            &::before
+                left: -4%
+            &::after
+                right: -4%
+            .swiper
+                &-button
+                    &-prev,
+                    &-next
+                        position: absolute
+                        top: 49%
+                        width: 32px
+                        height: 32px
+                        &::after
+                            display: none
+                    &-prev
+                        background: url('../img/logo/prev.png') center no-repeat
+                        left: 1.2%
+                    &-next
+                        background: url('../img/logo/next.png') center no-repeat
+                        right: 1.2%
+                &-active
+                    max-width: 610px
 .swiper
     &-slide
         +flex
@@ -31,15 +61,13 @@
             position: relative
             z-index: 50
             background: url('../img/logo/whats_1.png') center no-repeat
-            max-width: 647px
+            max-width: 582px
             width: 100%
-            min-height: 462px
+            min-height: 396px
             background-size: cover
+            padding: 40px 60px 60px
             &:nth-child(odd)
-                padding: 80px 90px 80px
                 margin-left: 10px
-            &:nth-child(even)
-                padding: 80px 90px 80px 80px
         &-active
             position: relative
             &::after
@@ -48,11 +76,12 @@
                 width: 58px
                 height: 58px
                 position: absolute
-                right: -42px
+                right: -30px
                 top: 55%
                 transform: translateY(-55px)
         &__inner
             +flex-items-center
+            margin-top: 20px
             margin-left: 7px
             img
                 padding-right: 27px
@@ -68,33 +97,29 @@
             margin: 29px 0 0 8px
             max-width: 450px
             overflow-y: scroll
-            height: 210px
+            height: 200px
+            &::-webkit-scrollbar
+	            width: 12px
+            &::-webkit-scrollbar
+                &-thumb
+                    border-width: 1px 1px 1px 2px
+                    background-image: linear-gradient(85deg, #5179a4 0%, #6aa9ec 100%)
+                    &:hover
+                        border-width: 1px 1px 1px 2px
+                        border-color: #000
+                        background-color: #000
+                &-track
+	                border-width: 1px 1px 1px 2px
             p
                 color: $black
                 line-height: 25px
                 margin: 0
+                max-width: 420px
                 
         &__video
             margin-top: 40px
             height: 200px
-    &-button
-        &-prev, 
-        &-next
-            position: absolute
-            top: 49%
-            width: 201px
-            height: 201px
-            z-index: 8
-        &-next
-            right: 12%
-            background: url('../img/logo/next.png') center no-repeat
-            &::after
-                display: none
-        &-prev
-            left: 12%
-            background: url('../img/logo/prev.png') center no-repeat
-            &::after
-                display: none
+            margin-left: 8px
 .portfolio-masters__size
     .swiper-slide-active::after
         display: none

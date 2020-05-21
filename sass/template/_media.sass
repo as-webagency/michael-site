@@ -333,7 +333,7 @@
                 margin: 55px auto 0
                 img
                     border-radius: 10px
-@media (max-width: 1070px)        
+@media (max-width: 1070px)
     .hero
         .container
             padding: 0
@@ -415,6 +415,13 @@
                 &:nth-child(3)
                     margin-top: 0
                     margin-bottom: 0
+    .modal
+        &__dialog
+            &::after
+                max-width: 370px
+                min-height: 220px
+                top: -30%
+                right: -40%
 @media (max-width: 830px)
     .footer
         &__bg
@@ -441,6 +448,13 @@
         &__phone
             margin-left: 55px     
 @media (max-width: 805px)
+    .modal
+        &__dialog
+            &::after
+                max-width: 250px
+                min-height: 150px
+                top: -19%
+                right: -23%
     .hero
         &__bg
             &::after
@@ -468,6 +482,11 @@
             color: rgba($lightGrey, .6)
             span
                 display: initial
+@media (max-width: 655px)
+    .modal
+        &__dialog
+            &::after
+                display: none
 @media (max-width: 615px)
     .reviews
         .swiper
@@ -804,4 +823,10 @@
         .swiper
             &-slide
                 &__item
-                    padding: 70px 20px 70px                
+                    padding: 70px 20px 70px       
+
+@media (max-height: 670px)
+    .modal
+        &__dialog
+            &::after
+                display: none         

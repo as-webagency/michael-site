@@ -8,11 +8,11 @@
             top: 0
             background: url('../img/footer.jpg') center no-repeat
             width: 100%
-            min-height: 1170px
+            min-height: 1220px
     &__section
         &-title
             margin-left: 22px
-            padding-top: 282px
+            padding-top: 322px
             position: relative
             z-index: 5 
             &::before
@@ -34,6 +34,12 @@
         text-align: center
         span
             display: block
+    &__policy
+        color: $light
+        position: relative
+        +flex
+        justify-content: flex-end
+        margin-top: 20px
     &-side
         +flex-wrap
         justify-content: space-between
@@ -57,9 +63,9 @@
             list-style-type: none
             max-width: 370px
         &__item
-            font-size: 18px
+            font-size: 20px
             color: $light
-            line-height: 18px
+            line-height: 22px
             position: relative
             padding-left: 10px
             margin-bottom: 18px
@@ -153,16 +159,5 @@
         margin-left: auto
     .social__contacts
         margin: -10px 36px 0 0
-    .social__link-instagram
-        width: 16px
-        height: 16px
-        +flex
-    .social__link-vk
-        width: 22px
-        height: 24px
-        +flex
-        align-items: center
-    .social__link-telegram
-        width: 19px
-        height: 16px
-        +flex
+    .social__image
+        max-width: none
