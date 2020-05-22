@@ -110,14 +110,16 @@
         padding-bottom: 0
         &-card
             &s
-                +content-center
+               &__size
+                    max-width: 1290px
+                    margin: 82px auto 0
             &__item
+                background-size: contain
+                max-width: 430px
                 &:nth-child(1),
                 &:nth-child(2),
                 &:nth-child(3)
                     left: auto
-                &:nth-child(3)
-                    margin-top: 200px
 @media (max-width: 1400px)
     .reviews 
         .swiper
@@ -138,7 +140,22 @@
         &__content
             &-circle
                 left: 40%
+@media (max-width: 1360px)
+    .masters
+        &-card
+            &__shadow
+                right: auto
+                left: 50%
+                transform: translateX(-50%)
+            &__animate
+                right: auto
+                left: 50%
+                transform: translateX(-50%)
 @media (max-width: 1330px)
+    .masters
+        &-card
+            &__item 
+                max-width: 410px
     .portfolio
         &-masters
             &__size 
@@ -170,6 +187,15 @@
                 &:after
                     display: none
 @media (max-width: 1260px)
+    .master
+        &s
+            &-card
+                &s
+                    +flex-column-center
+                &__item
+                    margin-top: 180px
+                    &:nth-child(1)
+                        margin-top: 0
     .main-title
         font-size: 50px
         line-height: 50px
@@ -407,7 +433,6 @@
             &-list
                 margin-left: 15px
     .masters
-        overflow: hidden
         &__section
             &-title
                 margin: 0 0 12px
@@ -461,21 +486,17 @@
         font-size: 40px
         line-height: normal
 @media (max-width: 953px)
-    .masters
-        &-card
-            &__item
-                margin-bottom: 190px
-                &:nth-child(3)
-                    margin-top: 0
-                    margin-bottom: 0
     .modal
         &__dialog
             &::after
                 max-width: 370px
                 min-height: 220px
-                top: -30%
                 right: -40%
 @media (max-width: 830px)
+    .masters
+        &-card
+            &__item
+                margin-top: 150px
     .footer
         &__policy
             margin-top: 30px
@@ -508,7 +529,7 @@
             &::after
                 max-width: 250px
                 min-height: 150px
-                top: -19%
+                top: -10%
                 right: -23%
     .hero
         &__bg
@@ -756,6 +777,7 @@
                 background-size: contain
                 max-width: 360px
                 margin-bottom: -48px
+                margin-top: 0
             &__image
                 margin: 0 auto 7px
                 max-width: 215px
@@ -875,6 +897,17 @@
             &-slide
                 &__item
                     padding: 70px 40px 70px                
+@media (max-width: 360px)
+    .masters
+        &-card
+            &__description
+                max-width: 190px
+            &__list
+                max-width: 195px
+            &__animate
+                bottom: 15%
+            &__shadow
+                bottom: 50px
 @media (max-width: 340px)
     .reviews 
         .swiper
@@ -892,4 +925,20 @@
     .modal
         &__dialog
             &::after
+                max-width: 350px
+                min-height: 180px
+                top: -10%
+                right: -35%
+@media (max-height: 570px)
+    .modal
+        &__dialog
+            &::after
+                top: -2%
+                right: -25%
+                max-width: 300px
+                min-height: 140px
+@media (max-height: 495px) 
+    .modal
+        &__dialog
+            &::after               
                 display: none         

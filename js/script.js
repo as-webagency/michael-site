@@ -64,14 +64,16 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        }
+        },
+        loop: true
     });
 
     var mySwiper = new Swiper ('.portfolio-slider', {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        }
+        },
+        loop: true
     });
 
     var mySwiper2 = new Swiper ('.reviews-block .swiper-container', {
@@ -88,7 +90,8 @@ k("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translatio
             320: {
               slidesPerView: 1
             },
-        }
+        },
+        loop: true
     });
     
     $('.footer__button').click(function() {

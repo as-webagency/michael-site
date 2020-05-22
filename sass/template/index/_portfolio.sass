@@ -64,7 +64,11 @@
                             height: 28px  
                             top: 43%
                             &::after
-                                display: none                 
+                                display: none 
+                            &.swiper-button-disabled
+                                pointer-events: auto
+                                opacity: 1
+                                cursor: pointer                
                         &-prev
                             left: 5.2% !important
                             right: auto

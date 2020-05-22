@@ -2929,6 +2929,12 @@ body.compensate-for-scrollbar {
   display: none;
 }
 
+.portfolio-masters__size .swiper-button-prev.swiper-button-disabled, .portfolio-masters__size .swiper-button-next.swiper-button-disabled {
+  pointer-events: auto;
+  opacity: 1;
+  cursor: pointer;
+}
+
 .portfolio-masters__size .swiper-button-prev {
   left: 5.2% !important;
   right: auto;
@@ -3163,6 +3169,12 @@ body.compensate-for-scrollbar {
 
 .reviews-block__item .swiper-button-prev::after, .reviews-block__item .swiper-button-next::after {
   display: none;
+}
+
+.reviews-block__item .swiper-button-prev.swiper-button-disabled, .reviews-block__item .swiper-button-next.swiper-button-disabled {
+  pointer-events: auto;
+  opacity: 1;
+  cursor: pointer;
 }
 
 .reviews-block__item .swiper-button-prev {
@@ -3577,18 +3589,18 @@ body.compensate-for-scrollbar {
 .modal__dialog::after {
   content: '';
   position: absolute;
-  top: -42%;
-  right: -51%;
+  top: -20%;
+  right: -52%;
   background: url("../img/socol.png") center/contain no-repeat;
   max-width: 510px;
   width: 100%;
-  min-height: 296px;
+  min-height: 240px;
 }
 
 .modal__close {
   position: absolute;
-  top: 30px;
   right: 30px;
+  bottom: 30px;
   background: url("../img/close.png") center no-repeat;
   width: 62px;
   height: 62px;
@@ -3910,16 +3922,16 @@ body.compensate-for-scrollbar {
   .masters {
     padding-bottom: 0;
   }
-  .masters-cards {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .masters-cards__size {
+    max-width: 1290px;
+    margin: 82px auto 0;
+  }
+  .masters-card__item {
+    background-size: contain;
+    max-width: 430px;
   }
   .masters-card__item:nth-child(1), .masters-card__item:nth-child(2), .masters-card__item:nth-child(3) {
     left: auto;
-  }
-  .masters-card__item:nth-child(3) {
-    margin-top: 200px;
   }
 }
 
@@ -3942,7 +3954,27 @@ body.compensate-for-scrollbar {
   }
 }
 
+@media (max-width: 1360px) {
+  .masters-card__shadow {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .masters-card__animate {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 1330px) {
+  .masters-card__item {
+    max-width: 410px;
+  }
   .portfolio-masters__size .swiper-slide-active .portfolio-master__inner::before, .portfolio-masters__size .swiper-slide-active .portfolio-master__inner::after {
     top: auto;
     bottom: 10px;
@@ -3969,6 +4001,21 @@ body.compensate-for-scrollbar {
 }
 
 @media (max-width: 1260px) {
+  .masters-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .masters-card__item {
+    margin-top: 180px;
+  }
+  .masters-card__item:nth-child(1) {
+    margin-top: 0;
+  }
   .main-title {
     font-size: 50px;
     line-height: 50px;
@@ -4239,9 +4286,6 @@ body.compensate-for-scrollbar {
   .hero__content p, .hero__content-price, .hero__content-list {
     margin-left: 15px;
   }
-  .masters {
-    overflow: hidden;
-  }
   .masters__section-title {
     margin: 0 0 12px;
     padding-top: 55px;
@@ -4314,22 +4358,17 @@ body.compensate-for-scrollbar {
 }
 
 @media (max-width: 953px) {
-  .masters-card__item {
-    margin-bottom: 190px;
-  }
-  .masters-card__item:nth-child(3) {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
   .modal__dialog::after {
     max-width: 370px;
     min-height: 220px;
-    top: -30%;
     right: -40%;
   }
 }
 
 @media (max-width: 830px) {
+  .masters-card__item {
+    margin-top: 150px;
+  }
   .footer__policy {
     margin-top: 30px;
     -webkit-box-pack: center;
@@ -4378,7 +4417,7 @@ body.compensate-for-scrollbar {
   .modal__dialog::after {
     max-width: 250px;
     min-height: 150px;
-    top: -19%;
+    top: -10%;
     right: -23%;
   }
   .hero__bg::after {
@@ -4675,6 +4714,7 @@ body.compensate-for-scrollbar {
     background-size: contain;
     max-width: 360px;
     margin-bottom: -48px;
+    margin-top: 0;
   }
   .masters-card__image {
     margin: 0 auto 7px;
@@ -4824,6 +4864,21 @@ body.compensate-for-scrollbar {
   }
 }
 
+@media (max-width: 360px) {
+  .masters-card__description {
+    max-width: 190px;
+  }
+  .masters-card__list {
+    max-width: 195px;
+  }
+  .masters-card__animate {
+    bottom: 15%;
+  }
+  .masters-card__shadow {
+    bottom: 50px;
+  }
+}
+
 @media (max-width: 340px) {
   .reviews .swiper-slide__item {
     padding: 70px 30px 70px;
@@ -4837,6 +4892,24 @@ body.compensate-for-scrollbar {
 }
 
 @media (max-height: 670px) {
+  .modal__dialog::after {
+    max-width: 350px;
+    min-height: 180px;
+    top: -10%;
+    right: -35%;
+  }
+}
+
+@media (max-height: 570px) {
+  .modal__dialog::after {
+    top: -2%;
+    right: -25%;
+    max-width: 300px;
+    min-height: 140px;
+  }
+}
+
+@media (max-height: 495px) {
   .modal__dialog::after {
     display: none;
   }
